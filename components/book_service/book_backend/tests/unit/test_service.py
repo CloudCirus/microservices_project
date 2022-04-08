@@ -56,6 +56,7 @@ def test_delete(service, book_repo, book_1):
     service.get_by_id = Mock(return_value=book_1)
     assert service.delete(id_) == book_1
 
+
 def test__take(service, book_repo, book_1):
     test_case = {
         "user_id": 1,
@@ -73,15 +74,3 @@ def test_give_back(service, book_repo, book_1, book_2):
     book_repo.get_by_id = Mock(return_value=book_2)
     service.get_by_id = Mock(return_value=book_2)
     assert service.give_back(**test_case) == book_1
-
-#
-#
-# def give_back(self, reserve_info: BookReserveInfo) -> Book:
-#     book = self.get_by_id(reserve_info.book_id)
-#     if book.status:
-#         raise errors.ActionProblem()
-#     if book:
-#         book_returned = self.book_repo.switch_status(book)
-#         self.send_message("book_return", reserve_info.user_id, book_returned.id)
-#         return book_returned
-#     raise errors.UnexpectedSearchValue()

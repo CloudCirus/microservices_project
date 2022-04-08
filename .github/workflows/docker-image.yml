@@ -20,3 +20,9 @@ jobs:
 
       - name: Run books_api tests
         run: cd components/ && docker-compose run book_api python3 -m py.test -v tests
+
+      - name: Run user_api tests
+        run: cd components/ && docker-compose run user_api python3 -m py.test -v tests
+
+      - name: Run issue_api tests
+        run: cd components/ && docker-compose run issue_api python3 -m py.test -v tests
