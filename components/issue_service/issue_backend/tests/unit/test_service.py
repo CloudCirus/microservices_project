@@ -39,16 +39,12 @@ def test__create(service, issue_repo, issue_1):
     }
     assert service.create(**test_case) == issue_1
 
-# def test__update(service, user_repo, user_1):
-#     test_case = {
-#         "name": "test_name_upd",
-#         "surname": "test_surname_upd"
-#     }
-#     service.get_by_id = Mock(return_value=user_1)
-#     assert service.update(**test_case) == user_1
-#
-#
-# def test_delete(service, user_repo, user_1):
-#     id_ = 1
-#     service.get_by_id = Mock(return_value=user_1)
-#     assert service.delete(id_) == user_1
+
+def test__create_issue_from_rabbitmq(service, issue_repo, issue_1):
+    test_case = {
+        "action": "test",
+        "user_id": 1,
+        "book_id": 1
+    }
+    assert service.create_issue_from_rabbitmq(**test_case) is None
+
