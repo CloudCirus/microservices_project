@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Run docker-compose without tests
-        run: docker-compose up -d
+        run: docker-compose -f components/docker-compose.yml build
 
       - name: Run books_api tests
-        run: docker-compose run books_api python3 -m py.test -v
+        run: cd components/ && docker-compose run book_api python3 -m py.test -v tests
