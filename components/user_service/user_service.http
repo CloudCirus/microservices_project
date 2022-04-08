@@ -1,0 +1,33 @@
+### Send POST request with json body fro create user
+POST http://localhost:1212/api/users/add_user
+Content-Type: application/json
+
+{
+  "name": "test_name",
+  "surname": "test_surname",
+  "email": "test_email@mail.ru",
+  "status": "test_status"
+}
+
+### GET request with id parameter for get user
+GET http://localhost:1234/api/users/user?id=1
+Accept: application/json
+
+### GET request for all users
+GET http://localhost:1234/api/users/all_users
+Accept: application/json
+
+
+### Send POST request with json body for update user
+POST http://localhost:1234/api/users/update_user
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "test_name_updated",
+  "email": "test_email@mail.ru_upadated"
+}
+
+### GET request with id parameter for delete user
+GET http://localhost:1234/api/users/delete_user?id=1
+Accept: application/json

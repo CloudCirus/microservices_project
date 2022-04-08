@@ -1,0 +1,55 @@
+### Send POST request with json body for create book
+POST http://localhost:1235/api/books/add_book
+Content-Type: application/json
+
+{
+  "title": "test_title",
+  "author": "test author",
+  "genre": "test genre"
+}
+
+### GET request with book id
+GET http://localhost:1235/api/books/book?id=1
+Accept: application/json
+
+### GET request all books by book title
+GET http://localhost:1235/api/books/all_by_title?title=test_title
+Accept: application/json
+
+### GET request all books
+GET http://localhost:1235/api/books/all
+Accept: application/json
+
+
+### Send POST request for update book
+POST http://localhost:1235/api/books/update_book
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "test title-updated",
+  "author": "test author-updated"
+}
+
+### GET request with book id param for delete book
+GET http://localhost:1235/api/books/delete_book?id=1
+Accept: application/json
+
+
+### Send POST request with json body for take book by book id
+POST http://localhost:1235/api/books/take_book
+Content-Type: application/json
+
+{
+  "book_id": 5,
+  "user_id": 1
+}
+
+### Send POST request with json body for return book by book id
+POST http://localhost:1235/api/books/return_book
+Content-Type: application/json
+
+{
+  "book_id": 5,
+  "user_id": 1
+}
