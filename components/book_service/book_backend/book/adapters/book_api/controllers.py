@@ -26,13 +26,16 @@ class Books:
     def on_get_all_by_title(self, req, resp: Response):
         title = req.params.get("title")
         books = self.service.get_all_by_title(title)
-        resp.media = sorted([asdict(book) for book in books], key=lambda x: "status")
+        resp.media = sorted(
+            [asdict(book) for book in books],
+            key=lambda x: "status"
+        )
 
     @join_point
     def on_get_delete_book(self, req: Request, resp: Response):
-        book = req.params.get("id")
-        deleted_book = self.service.delete(book)
-        resp.media = asdict(deleted_book)
+        book_id = req.params.get("id")
+        book = self.service.delete(book_id)
+        resp.media = asdict(book)
 
     @join_point
     def on_post_add_book(self, req: Request, resp: Response):

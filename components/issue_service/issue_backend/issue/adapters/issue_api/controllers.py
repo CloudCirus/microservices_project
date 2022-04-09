@@ -15,15 +15,15 @@ class Issues:
     service: services.IssueService
 
     @staticmethod
-    def convert_for_response(raw_resp: Union[List[Issue], Issue]) -> Union[List[dict], dict]:
-        if isinstance(raw_resp, list):
+    def convert_for_response(issue_or_issues: Union[List[Issue], Issue]) -> Union[List[dict], dict]:
+        if isinstance(issue_or_issues, list):
             response = []
-            for issue_obj in raw_resp:
+            for issue_obj in issue_or_issues:
                 issue_obj.created_at = issue_obj.created_at.strftime("%m.%d.%Y, %H:%M:%S")
                 response.append(asdict(issue_obj))
         else:
-            raw_resp.created_at = raw_resp.created_at.strftime("%m.%d.%Y, %H:%M:%S")
-            response = asdict(raw_resp)
+            issue_or_issues.created_at = issue_or_issues.created_at.strftime("%m.%d.%Y, %H:%M:%S")
+            response = asdict(issue_or_issues)
         return response
 
     @join_point

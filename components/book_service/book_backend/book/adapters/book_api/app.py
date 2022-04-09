@@ -1,7 +1,7 @@
 from classic.http_api import App
 
-from book.application import services
 from . import controllers
+from book.application import services
 
 
 def create_app(book: services.BookService) -> App:

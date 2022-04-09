@@ -60,16 +60,17 @@ class IssueService:
     @validate_with_dto
     def create(self, issue_info: IssueInfo) -> Issue:
         issue = issue_info.create_obj(Issue)
-        created = self.issue_repo.create(issue)
-        return created
+        issue_created = self.issue_repo.create(issue)
+        return issue_created
 
     @join_point
     @validate_arguments
-    def create_issue_from_rabbitmq(self,
-                                   action: str,
-                                   user_id: int = None,
-                                   book_id: int = None
-                                   ) -> None:
-        print(action, user_id)
+    def create_issue_from_rabbitmq(
+            self,
+            action: str,
+            user_id: int = None,
+            book_id: int = None
+    ) -> None:
+
         issue = Issue(action=action, user_id=user_id, book_id=book_id)
         self.issue_repo.create(issue)
