@@ -10,7 +10,7 @@ services:
       RABBITMQ_DEFAULT_USER: admin
       RABBITMQ_DEFAULT_PASS: password
     volumes:
-      - "rabbitmq_data:/data"
+      - ./rabbitmq_data:/data
 
   database:
     build: postgresql
@@ -18,10 +18,11 @@ services:
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password
+      PGDATA: /var/lib/postgresql/data/pgdata
     ports:
       - "5432:5432"
     volumes:
-      - "postgres_data:/data"
+      - ./pg_data:/var/lib/postgresql/data/pgdata
 
   user_api:
     build: user_service/user_backend
