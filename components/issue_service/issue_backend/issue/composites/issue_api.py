@@ -1,7 +1,7 @@
 from threading import Thread
 
-from kombu import Connection
 from sqlalchemy import create_engine
+from kombu import Connection
 
 from classic.sql_storage import TransactionContext
 

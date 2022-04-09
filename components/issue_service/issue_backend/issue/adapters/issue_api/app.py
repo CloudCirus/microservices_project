@@ -1,7 +1,6 @@
 from classic.http_api import App
 
 from issue.application import services
-
 from . import controllers
 
 

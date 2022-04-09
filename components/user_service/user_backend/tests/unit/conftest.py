@@ -1,12 +1,9 @@
-from classic.messaging import Message, Publisher
-
-from user.application import dataclasses, services
-
 from unittest.mock import Mock
 
 import pytest
 
-from user.application import interfaces
+from classic.messaging import Publisher
+from user.application import dataclasses, interfaces, services
 
 
 @pytest.fixture(scope="function")

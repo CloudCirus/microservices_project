@@ -29,5 +29,5 @@ Content-Type: application/json
 }
 
 ### GET request with id parameter for delete user
-GET http://localhost:1234/api/users/delete_user?id=1
+GET http://localhost:1234/api/users/delete_user?id=2
 Accept: application/json

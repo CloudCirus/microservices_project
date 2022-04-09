@@ -1,4 +1,11 @@
-from sqlalchemy import Column, Integer, MetaData, String, Table, Boolean
+from sqlalchemy import (
+    Boolean,
+    Column,
+    Integer,
+    MetaData,
+    String,
+    Table
+)
 
 naming_convention = {
     "all_column_names": lambda constraint, table: "_".join([

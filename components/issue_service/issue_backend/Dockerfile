@@ -11,5 +11,3 @@ COPY entry_point.sh /usr/bin/
 COPY . .
 
 RUN chmod +x /usr/bin/entry_point.sh
-
-#CMD ["python3", "-m", "run.py"]

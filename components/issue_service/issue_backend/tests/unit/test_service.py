@@ -1,8 +1,9 @@
+from unittest.mock import Mock
+
 import pytest
 
-from issue.application.services import IssueService
 from issue.application import errors
-from unittest.mock import Mock
+from issue.application.services import IssueService
 
 
 @pytest.fixture(scope="function")
@@ -47,4 +48,3 @@ def test__create_issue_from_rabbitmq(service, issue_repo, issue_1):
         "book_id": 1
     }
     assert service.create_issue_from_rabbitmq(**test_case) is None
-

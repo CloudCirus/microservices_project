@@ -4,7 +4,6 @@ from classic.components import component
 from falcon import Request, Response
 
 from book.application import services
-
 from .join_points import join_point
 
 

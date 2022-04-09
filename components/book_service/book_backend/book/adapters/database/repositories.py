@@ -1,8 +1,9 @@
 from typing import List, Optional
 
+from sqlalchemy import select
+
 from classic.components import component
 from classic.sql_storage import BaseRepository
-from sqlalchemy import select
 
 from book.application.dataclasses import Book
 from book.application.interfaces import BookRepoI

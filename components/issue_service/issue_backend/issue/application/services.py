@@ -1,5 +1,5 @@
-from typing import List, Optional, Union
 from datetime import datetime
+from typing import List, Optional, Union
 from pydantic import validate_arguments
 
 from classic.app import DTO, validate_with_dto

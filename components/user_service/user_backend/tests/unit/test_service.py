@@ -1,8 +1,9 @@
+from unittest.mock import Mock
+
 import pytest
 
-from user.application.services import UserService
 from user.application import errors
-from unittest.mock import Mock
+from user.application.services import UserService
 
 
 @pytest.fixture(scope="function")

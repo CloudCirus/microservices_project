@@ -1,13 +1,11 @@
-from classic.messaging import Message, Publisher
 from datetime import datetime
-
-from issue.application import dataclasses, services
-
 from unittest.mock import Mock
 
 import pytest
 
-from issue.application import interfaces
+from classic.messaging import Publisher
+
+from issue.application import dataclasses, interfaces
 
 
 @pytest.fixture(scope="function")

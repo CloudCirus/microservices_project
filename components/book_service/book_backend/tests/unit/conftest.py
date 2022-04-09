@@ -1,12 +1,9 @@
-from classic.messaging import Message, Publisher
-
-from book.application import dataclasses, services
-
 from unittest.mock import Mock
-
 import pytest
 
-from book.application import interfaces
+from classic.messaging import Publisher
+
+from book.application import dataclasses, interfaces, services
 
 
 @pytest.fixture(scope="function")
@@ -63,5 +60,4 @@ def book_res_info():
     return services.BookReserveInfo(
         book_id=1,
         user_id=1
-
     )

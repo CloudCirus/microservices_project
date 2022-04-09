@@ -1,7 +1,6 @@
 from sqlalchemy.orm import registry
 
 from book.application.dataclasses import Book
-
 from .tables import book_table
 
 mapper = registry()

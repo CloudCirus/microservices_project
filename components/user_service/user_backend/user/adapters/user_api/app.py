@@ -1,8 +1,7 @@
-from classic.http_api import App
-
 from user.application import services
 
 from . import controllers
+from classic.http_api import App
 
 
 def create_app(user: services.UserService) -> App:

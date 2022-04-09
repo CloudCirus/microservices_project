@@ -1,8 +1,8 @@
+from unittest.mock import Mock
 import pytest
 
-from book.application.services import BookService
 from book.application import errors
-from unittest.mock import Mock
+from book.application.services import BookService
 
 
 @pytest.fixture(scope="function")

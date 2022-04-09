@@ -1,10 +1,10 @@
 from dataclasses import asdict
 
-from classic.components import component
 from falcon import Request, Response
 
-from user.application import services
+from classic.components import component
 
+from user.application import services
 from .join_points import join_point
 
 

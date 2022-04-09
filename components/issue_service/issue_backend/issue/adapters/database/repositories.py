@@ -1,8 +1,9 @@
 from typing import List, Optional, Union
 
+from sqlalchemy import select
+
 from classic.components import component
 from classic.sql_storage import BaseRepository
-from sqlalchemy import select
 
 from issue.application.dataclasses import Issue
 from issue.application.interfaces import IssueRepoI

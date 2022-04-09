@@ -1,5 +1,5 @@
 ### Send POST request with json body for create book
-POST http://localhost:1235/api/books/add_book
+POST http://localhost:1212/api/books/add_book
 Content-Type: application/json
 
 {
@@ -32,12 +32,12 @@ Content-Type: application/json
 }
 
 ### GET request with book id param for delete book
-GET http://localhost:1235/api/books/delete_book?id=1
+GET http://localhost:1235/api/books/delete_book?id=2
 Accept: application/json
 
 
 ### Send POST request with json body for take book by book id
-POST http://localhost:1235/api/books/take_book
+POST http://localhost:1212/api/books/take_book
 Content-Type: application/json
 
 {

@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 from classic.messaging_kombu import KombuPublisher
 from classic.sql_storage import TransactionContext
 
-from user.adapters import database, user_api, message_bus
+from user.adapters import database, message_bus, user_api
 from user.application import services
 
 

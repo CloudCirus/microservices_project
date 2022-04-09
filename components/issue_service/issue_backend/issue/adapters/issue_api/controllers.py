@@ -1,12 +1,12 @@
 from dataclasses import asdict
-from typing import Union, List
+from typing import List, Union
+
+from falcon import Request, Response
 
 from classic.components import component
-from falcon import Request, Response
 
 from issue.application import services
 from issue.application.dataclasses import Issue
-
 from .join_points import join_point
 
 
